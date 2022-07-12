@@ -1,37 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ads-UK-Pwi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="ARViewController" customModule="FlipkartHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fnM-YO-6lY"/>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="hzn-nQ-ddy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1316" y="108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZW2-BI-ad6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ads-UK-Pwi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="whc-6L-AmE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yeD-Ve-fCQ" kind="relationship" relationship="rootViewController" id="Mqq-Rd-Gc8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUm-VE-kW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-299" y="108"/>
+        </scene>
+        <!--Watches-->
+        <scene sceneID="HBF-XM-FgJ">
+            <objects>
+                <viewController id="yeD-Ve-fCQ" customClass="CollectionViewController" customModule="FlipkartHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nRl-La-4tl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hev-Si-2C2">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aYJ-80-ETe">
+                                    <size key="itemSize" width="181" height="182"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="e3p-wU-gHX" customClass="CollectionViewCell" customModule="FlipkartHackathon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HfH-60-RQ6">
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="182"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gB0-Mx-DGq">
+                                                    <rect key="frame" x="8" y="8" width="165" height="145"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gB0-Mx-DGq" secondAttribute="height" multiplier="33:29" id="2A2-kH-epu"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RP-qK-P4s">
+                                                    <rect key="frame" x="8" y="153" width="165" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gB0-Mx-DGq" firstAttribute="leading" secondItem="HfH-60-RQ6" secondAttribute="leading" constant="8" id="2UJ-cY-oj7"/>
+                                                <constraint firstItem="9RP-qK-P4s" firstAttribute="top" secondItem="gB0-Mx-DGq" secondAttribute="bottom" id="HbV-hb-Csd"/>
+                                                <constraint firstItem="gB0-Mx-DGq" firstAttribute="top" secondItem="HfH-60-RQ6" secondAttribute="top" constant="8" id="J7y-fh-DbO"/>
+                                                <constraint firstAttribute="bottom" secondItem="9RP-qK-P4s" secondAttribute="bottom" constant="8" id="Rvp-8H-fqS"/>
+                                                <constraint firstAttribute="trailing" secondItem="gB0-Mx-DGq" secondAttribute="trailing" constant="8" id="fY8-Lc-bLj"/>
+                                                <constraint firstAttribute="trailing" secondItem="9RP-qK-P4s" secondAttribute="trailing" constant="8" id="gEk-Hr-miL"/>
+                                                <constraint firstItem="9RP-qK-P4s" firstAttribute="leading" secondItem="HfH-60-RQ6" secondAttribute="leading" constant="8" id="sxq-rL-mBu"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="181" height="182"/>
+                                        <connections>
+                                            <outlet property="collectionImageView" destination="gB0-Mx-DGq" id="KaF-wm-rdd"/>
+                                            <outlet property="collectionLabel" destination="9RP-qK-P4s" id="8Q1-jG-iKg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NT4-Me-Jjx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NT4-Me-Jjx" firstAttribute="trailing" secondItem="hev-Si-2C2" secondAttribute="trailing" constant="20" id="1Al-VW-dQn"/>
+                            <constraint firstItem="hev-Si-2C2" firstAttribute="top" secondItem="NT4-Me-Jjx" secondAttribute="top" id="e8J-Ig-uRy"/>
+                            <constraint firstItem="hev-Si-2C2" firstAttribute="bottom" secondItem="NT4-Me-Jjx" secondAttribute="bottom" id="eNy-Gh-Bjr"/>
+                            <constraint firstItem="hev-Si-2C2" firstAttribute="leading" secondItem="NT4-Me-Jjx" secondAttribute="leading" constant="20" id="mR1-np-rHo"/>
+                            <constraint firstItem="hev-Si-2C2" firstAttribute="top" secondItem="NT4-Me-Jjx" secondAttribute="top" id="rut-Fn-zRp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Watches" id="tTI-1P-xKw"/>
+                    <connections>
+                        <outlet property="collectionView" destination="hev-Si-2C2" id="fRd-W8-JRj"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="ARSegue" id="6xg-oG-ZEE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRa-nc-GxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457.97101449275368" y="107.8125"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

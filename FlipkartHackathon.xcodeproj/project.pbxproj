@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B112C7E528795F8F0034FAD4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112C7E428795F8F0034FAD4 /* CollectionViewCell.swift */; };
+		B112C7E7287960800034FAD4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112C7E6287960800034FAD4 /* CollectionViewController.swift */; };
 		B1322863287954CA00821FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1322862287954CA00821FDA /* AppDelegate.swift */; };
 		B1322865287954CA00821FDA /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B1322864287954CA00821FDA /* art.scnassets */; };
-		B1322867287954CA00821FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1322866287954CA00821FDA /* ViewController.swift */; };
+		B1322867287954CA00821FDA /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1322866287954CA00821FDA /* ARViewController.swift */; };
 		B132286A287954CA00821FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1322868287954CA00821FDA /* Main.storyboard */; };
 		B132286C287954CD00821FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B132286B287954CD00821FDA /* Assets.xcassets */; };
 		B132286F287954CD00821FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B132286D287954CD00821FDA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B112C7E428795F8F0034FAD4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		B112C7E6287960800034FAD4 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		B132285F287954CA00821FDA /* FlipkartHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipkartHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1322862287954CA00821FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1322864287954CA00821FDA /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		B1322866287954CA00821FDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B1322866287954CA00821FDA /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		B1322869287954CA00821FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B132286B287954CD00821FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B132286E287954CD00821FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +61,9 @@
 			children = (
 				B1322862287954CA00821FDA /* AppDelegate.swift */,
 				B1322864287954CA00821FDA /* art.scnassets */,
-				B1322866287954CA00821FDA /* ViewController.swift */,
+				B1322866287954CA00821FDA /* ARViewController.swift */,
+				B112C7E428795F8F0034FAD4 /* CollectionViewCell.swift */,
+				B112C7E6287960800034FAD4 /* CollectionViewController.swift */,
 				B1322868287954CA00821FDA /* Main.storyboard */,
 				B132286B287954CD00821FDA /* Assets.xcassets */,
 				B132286D287954CD00821FDA /* LaunchScreen.storyboard */,
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1322867287954CA00821FDA /* ViewController.swift in Sources */,
+				B112C7E7287960800034FAD4 /* CollectionViewController.swift in Sources */,
+				B1322867287954CA00821FDA /* ARViewController.swift in Sources */,
+				B112C7E528795F8F0034FAD4 /* CollectionViewCell.swift in Sources */,
 				B1322863287954CA00821FDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +295,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8YFV276376;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Pls give camera for AR usage";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8YFV276376;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Pls give camera for AR usage";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
