@@ -36,6 +36,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }
         configuration.trackingImages = trackedImages
         configuration.maximumNumberOfTrackedImages = 2
+        configuration.frameSemantics.insert(.personSegmentationWithDepth)
+
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
